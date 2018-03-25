@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '2($1g&ymxha%4yubxp%*2=5$86krb7zo5m^&&7!0b62lld4s6l'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [".herokuapp.com/", "127.0.0.1", ".shielded-refuge-53540.herokuapp.com"] #wildcard MAY be insecure: watch out later
 
@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
+    'django.contrib.staticfiles'
 ]
 
 MIDDLEWARE = [
@@ -81,6 +81,17 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'test1',
+#         'USER': 'dcw3',
+#         'PASSWORD': 'RIPBelovedJoeman123!',
+#         'HOST': 'localhost',
+#         'PORT': '',
+#     }
+# }
 
 
 # Password validation
@@ -128,7 +139,7 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # set DEBUG = false for deployment
 
 # CSRF_COOKIE_SECURE = True
-# X_FRAME_OPTIONS = 'DENY'
+# # X_FRAME_OPTIONS = 'DENY'
 # SECURE_HSTS_SECONDS = 0
 # SECURE_CONTENT_TYPE_NOSNIFF = True
 # SECURE_BROWSER_XSS_FILTER = True
